@@ -8,7 +8,7 @@
  * _printf - format text
  * @format: format specifier
  *
- * Return: sum of bytes
+ * Return: number of characters
  */
 
 int _printf(const char *format, ...)
@@ -62,11 +62,6 @@ int _printf(const char *format, ...)
 				}
 				write(1, str, str_len);
 				sum += str_len;
-			}
-			else if (*format == '%')
-			{
-				write(1, format, 1);
-				sum++;
 			}
 		}
 		format++;
